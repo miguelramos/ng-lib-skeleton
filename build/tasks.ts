@@ -15,7 +15,7 @@ export function removeDistFolder(config: Config) {
  */
 export async function compilePackagesWithNgc(config: Config) {
   const pkgs = util.getTopLevelPackages(config);
-  const storePkg = 'store';
+  const storePkg = 'mylib';
   const restPkgs = pkgs.filter(name => name !== storePkg);
   const testPkgs = util.getTestingPackages(config);
 
@@ -41,7 +41,9 @@ async function _compilePackagesWithNgc(pkg: string) {
     : [pkg, 'index'];
 
   const entryTypeDefinition = `export * from './${exportPath}/${moduleName}';`;
-  const entryMetadata = `{"__symbolic":"module","version":3,"metadata":{},"exports":[{"from":"./${pkg}/index"}]}`;
+  const entryMetadata = `{"__symbolic":"module","version":3,"metadata":{},"exports":[{"from":"./${
+    pkg
+  }/index"}]}`;
 
   await Promise.all([
     util.writeFile(`./dist/packages/${pkg}.d.ts`, entryTypeDefinition),
@@ -186,7 +188,9 @@ export async function minifyUmdBundles(config: Config) {
       file,
       ...uglifyArgs,
       `-o ${out}`,
-      `--source-map "filename='${out}.map' includeSources='${file}', content='${file}.map'"`,
+      `--source-map "filename='${out}.map' includeSources='${file}', content='${
+        file
+      }.map'"`,
     ]);
   });
 }
@@ -233,7 +237,7 @@ export async function removePackagesFolder(config: Config) {
 export async function publishToRepo(config: Config) {
   for (let pkg of util.getTopLevelPackages(config)) {
     const SOURCE_DIR = `./dist/${pkg}`;
-    const REPO_URL = `git@github.com:ngrx/${pkg}-builds.git`;
+    const REPO_URL = `git@github.com:nglib/${pkg}-builds.git`;
     const REPO_DIR = `./tmp/${pkg}`;
     const SHA = await util.git([`rev-parse HEAD`]);
     const SHORT_SHA = await util.git([`rev-parse --short HEAD`]);

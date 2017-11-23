@@ -1,8 +1,8 @@
 import build from './builder';
-import { packages } from './config';
+import { packages, NAMESPACE_LIB } from './config';
 
 build({
-  scope: '@ngrx',
+  scope: NAMESPACE_LIB,
   packages,
 }).catch(err => {
   console.error(err);

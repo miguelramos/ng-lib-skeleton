@@ -1,11 +1,11 @@
 import * as tasks from './tasks';
 import { createBuilder } from './util';
-import { packages } from './config';
+import { packages, NAMESPACE_LIB } from './config';
 
 const deploy = createBuilder([['Deploy builds', tasks.publishToRepo]]);
 
 deploy({
-  scope: '@ngrx',
+  scope: NAMESPACE_LIB,
   packages,
 }).catch(err => {
   console.error(err);

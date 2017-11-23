@@ -20,7 +20,7 @@ test:
 
 deployment:
   builds:
-    owner: ngrx
+    owner: nglib
     branch: master
     commands:
       - yarn run deploy:builds

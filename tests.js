@@ -20,7 +20,7 @@ const { ServerTestingModule, platformServerTesting } = require('@angular/platfor
 
 getTestBed().initTestEnvironment(ServerTestingModule, platformServerTesting());
 
-moduleAlias.addAlias('@ngrx', __dirname + '/modules');
+moduleAlias.addAlias('@nglib', __dirname + '/modules');
 
 runner.loadConfig({
   spec_dir: 'modules',

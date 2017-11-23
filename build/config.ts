@@ -10,27 +10,9 @@ export interface Config {
 
 export const packages: PackageDescription[] = [
   {
-    name: 'store',
-    hasTestingModule: false,
-  },
-  {
-    name: 'effects',
-    hasTestingModule: true,
-  },
-  {
-    name: 'router-store',
-    hasTestingModule: false,
-  },
-  {
-    name: 'store-devtools',
-    hasTestingModule: false,
-  },
-  {
-    name: 'entity',
-    hasTestingModule: false,
-  },
-  {
-    name: 'codegen',
+    name: 'mylib',
     hasTestingModule: false,
   },
 ];
+
+export const NAMESPACE_LIB = '@nglib';

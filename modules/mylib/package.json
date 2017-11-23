@@ -1,0 +1,28 @@
+{
+  "name": "@nglib/mylib",
+  "version": "1.0.0",
+  "description": "Library example",
+  "module": "@nglib/mylib.es5.js",
+  "es2015": "@nglib/mylib.js",
+  "main": "bundles/mylib.umd.js",
+  "typings": "mylib.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nglib/mylib.git"
+  },
+  "keywords": [
+    "Example",
+    "Angular",
+    "Library"
+  ],
+  "author": "Miguel Ramos <miguel.marques.ramos@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nglib/mylib/issues"
+  },
+  "homepage": "https://github.com/nglib/mylib#readme",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0 || ^5.0.0-rc.2 || ^5.0.0",
+    "rxjs": "^5.0.0"
+  }
+}
