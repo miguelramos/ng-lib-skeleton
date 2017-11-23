@@ -18,9 +18,9 @@ test:
     - yarn run example:build:prod
     - yarn run example:test -- --watch=false
 
-deployment:
-  builds:
-    owner: nglib
-    branch: master
-    commands:
-      - yarn run deploy:builds
+#deployment:
+#  builds:
+#    owner: nglib
+#    branch: master
+#    commands:
+#      - yarn run deploy:builds
