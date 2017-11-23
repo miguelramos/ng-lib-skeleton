@@ -1,5 +1,3 @@
-<!-- ❤️ ngrx? Please consider supporting our collective: 👉  [donate](https://opencollective.com/ngrx/donate) -->
-
 ## I'm submitting a...
 <!-- Check one of the following options with "x" -->
 <pre><code>
